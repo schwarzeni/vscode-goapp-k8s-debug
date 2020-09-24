@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-golang-app
+  annotations:
+    seccomp.security.alpha.kubernetes.io/defaultProfileName: "unconfined"
+spec:
+  containers:
+    - name: my-golang-app
+      image: my-golang-app-image:latest
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 2345
+          hostPort: 2345

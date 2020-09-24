@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "pre-debug",
+      "type": "process",
+      "command": "./debug/pre-debug.sh",
+    },
+    {
+      "label": "post-debug",
+      "type": "process",
+      "command": "./debug/post-debug.sh"
+    }
+  ]
+}
